@@ -14,11 +14,11 @@ $ ./incredible-slow-graalvm_ce-java17-21.3.0
 generateRandomData >
 end generateRandomData (29441 ms) !!! slow to 10 times !!!
 search synonyms in data >
-end search synonyms (11510 ms)
+end search synonyms (11510 ms) !!! slow to 2 times !!!
 
 $ ./incredible-slow-graalvm_ce-22.1.0-dev-20220113_2228
 generateRandomData >
-end generateRandomData (55176 ms) !!! more slower than 21.3.0 !!!
+end generateRandomData (55176 ms) !!! slower than 21.3.0 !!!
 search synonyms in data >
-end search synonyms (11433 ms)
+end search synonyms (11433 ms) !!! slow to 2 times !!!
 ```
