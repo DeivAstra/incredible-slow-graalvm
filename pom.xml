@@ -32,7 +32,7 @@
 						<configuration>
 							<mainClass>test.IncredibleSlowGraalVmTest</mainClass>
 							<buildArgs>
-								<buildArg>--verbose</buildArg>
+								<buildArg>--native-image-info --verbose</buildArg>
 							</buildArgs>
 						</configuration>
 					</plugin>
