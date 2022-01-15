@@ -7,7 +7,7 @@
 	<properties>
 		<source.version>17</source.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<exec.mainClass>vavilon.App</exec.mainClass>
+		<exec.mainClass>test.IncredibleSlowGraalVmTest</exec.mainClass>
 	</properties>
 
 	<profiles>
