@@ -10,15 +10,15 @@ end generateRandomData (2937 ms)
 search synonyms in data >
 end search synonyms (4564 ms)
 
-// GraalVm (graalvm-ce-java17-21.3.0)
+$ ./incredible-slow-graalvm_ce-java17-21.3.0
 generateRandomData >
-end generateRandomData (30199 ms)
+end generateRandomData (29441 ms) !!! slow to 10 times !!!
 search synonyms in data >
-end search synonyms (11252 ms)
+end search synonyms (11510 ms)
 
-GraalVm (GraalVM CE 22.1.0-dev-20220113_2228)
+$ ./incredible-slow-graalvm_ce-22.1.0-dev-20220113_2228
 generateRandomData >
-end generateRandomData (59646 ms)
+end generateRandomData (55176 ms) !!! more slower than 21.3.0 !!!
 search synonyms in data >
-end search synonyms (13237 ms)
+end search synonyms (11433 ms)
 ```
