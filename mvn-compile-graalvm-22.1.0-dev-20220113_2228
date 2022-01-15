@@ -1,0 +1,177 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< test:incredible-slow-graalvm >--------------------
+[INFO] Building incredible-slow-graalvm 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ incredible-slow-graalvm ---
+[INFO] Deleting /tmp/graalvm-test/incredible-slow-graalvm/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ incredible-slow-graalvm ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/graalvm-test/incredible-slow-graalvm/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ incredible-slow-graalvm ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /tmp/graalvm-test/incredible-slow-graalvm/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ incredible-slow-graalvm ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/graalvm-test/incredible-slow-graalvm/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ incredible-slow-graalvm ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ incredible-slow-graalvm ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ incredible-slow-graalvm ---
+[INFO] Building jar: /tmp/graalvm-test/incredible-slow-graalvm/target/incredible-slow-graalvm-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- native-maven-plugin:0.9.9:build (build-native) @ incredible-slow-graalvm ---
+[INFO] ImageClasspath Entry: test:incredible-slow-graalvm:jar:0.0.1-SNAPSHOT (file:///tmp/graalvm-test/incredible-slow-graalvm/target/incredible-slow-graalvm-0.0.1-SNAPSHOT.jar)
+[INFO] Executing: /run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/bin/native-image -cp /tmp/graalvm-test/incredible-slow-graalvm/target/incredible-slow-graalvm-0.0.1-SNAPSHOT.jar --native-image-info --verbose -H:Class=test.IncredibleSlowGraalVmTest -H:Name=incredible-slow-graalvm
+Executing [
+/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/bin/java \
+-XX:+UseParallelGC \
+-XX:+UnlockExperimentalVMOptions \
+-XX:+EnableJVMCI \
+-Dtruffle.TrustAllTruffleRuntimeProviders=true \
+-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime \
+-Dgraalvm.ForcePolyglotInvalid=true \
+-Dgraalvm.locatorDisabled=true \
+-Dsubstratevm.IgnoreGraalVersionCheck=true \
+--add-exports=java.base/com.sun.crypto.provider=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.access.foreign=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.event=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.loader=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.logger=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.misc=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.module=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.org.xml.sax.helpers=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.perf=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.platform=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.ref=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.reflect=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.util.xml.impl=ALL-UNNAMED \
+--add-exports=java.base/jdk.internal.util.xml=ALL-UNNAMED \
+--add-exports=java.base/sun.invoke.util=ALL-UNNAMED \
+--add-exports=java.base/sun.net=ALL-UNNAMED \
+--add-exports=java.base/sun.nio.ch=ALL-UNNAMED \
+--add-exports=java.base/sun.reflect.annotation=ALL-UNNAMED \
+--add-exports=java.base/sun.reflect.generics.reflectiveObjects=ALL-UNNAMED \
+--add-exports=java.base/sun.reflect.generics.repository=ALL-UNNAMED \
+--add-exports=java.base/sun.reflect.generics.tree=ALL-UNNAMED \
+--add-exports=java.base/sun.security.jca=ALL-UNNAMED \
+--add-exports=java.base/sun.security.provider=ALL-UNNAMED \
+--add-exports=java.base/sun.security.ssl=ALL-UNNAMED \
+--add-exports=java.base/sun.security.util=ALL-UNNAMED \
+--add-exports=java.base/sun.security.x509=ALL-UNNAMED \
+--add-exports=java.base/sun.text.spi=ALL-UNNAMED \
+--add-exports=java.base/sun.util.calendar=ALL-UNNAMED \
+--add-exports=java.base/sun.util.locale.provider=ALL-UNNAMED \
+--add-exports=java.base/sun.util.resources=ALL-UNNAMED \
+--add-exports=java.base/sun.util=ALL-UNNAMED \
+--add-exports=java.desktop/sun.java2d.pipe=ALL-UNNAMED \
+--add-exports=java.desktop/sun.java2d=ALL-UNNAMED \
+--add-exports=java.management/com.sun.jmx.mbeanserver=ALL-UNNAMED \
+--add-exports=java.management/sun.management=ALL-UNNAMED \
+--add-exports=java.xml.crypto/org.jcp.xml.dsig.internal.dom=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.aarch64=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.amd64=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.code.site=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.code.stack=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.code=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.common=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.hotspot.aarch64=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.hotspot.amd64=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.hotspot=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.meta=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.runtime=ALL-UNNAMED \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.services=ALL-UNNAMED \
+--add-exports=jdk.jfr/jdk.jfr.events=ALL-UNNAMED \
+--add-exports=jdk.jfr/jdk.jfr.internal.consumer=ALL-UNNAMED \
+--add-exports=jdk.jfr/jdk.jfr.internal.handlers=ALL-UNNAMED \
+--add-exports=jdk.jfr/jdk.jfr.internal.jfc=ALL-UNNAMED \
+--add-exports=jdk.jfr/jdk.jfr.internal=ALL-UNNAMED \
+--add-exports=jdk.management/com.sun.management.internal=ALL-UNNAMED \
+-XX:+UseJVMCINativeLibrary \
+-Xss10m \
+-Xms1g \
+-Xmx14g \
+-Djava.awt.headless=true \
+-Dorg.graalvm.version=22.1.0-dev \
+-Dorg.graalvm.config=CE \
+-Dcom.oracle.graalvm.isaot=true \
+-Djava.system.class.loader=com.oracle.svm.hosted.NativeImageSystemClassLoader \
+-Xshare:off \
+-Djdk.internal.lambda.disableEagerInitialization=true \
+-Djdk.internal.lambda.eagerlyInitialize=false \
+-Djava.lang.invoke.InnerClassLambdaMetafactory.initializeLambdas=false \
+-javaagent:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/svm.jar \
+-cp \
+/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/pointsto.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/objectfile.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/svm-llvm.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/llvm-wrapper-shadowed.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/javacpp-shadowed.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/native-image-base.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/llvm-platform-specific-shadowed.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/builder/svm.jar \
+--module-path \
+/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/truffle/truffle-api.jar \
+'com.oracle.svm.hosted.NativeImageGeneratorRunner$JDK9Plus' \
+-watchpid \
+221972 \
+-imagecp \
+/tmp/graalvm-test/incredible-slow-graalvm/target/incredible-slow-graalvm-0.0.1-SNAPSHOT.jar:/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/library-support.jar \
+-H:Path=/tmp/graalvm-test/incredible-slow-graalvm/target \
+-H:+DumpTargetInfo \
+-H:Class=test.IncredibleSlowGraalVmTest \
+-H:Name=incredible-slow-graalvm \
+-H:CLibraryPath=/run/media/danykey/SSD-250GB/dev/tools/graalvm-ce-java17-22.1.0-dev/lib/svm/clibraries/linux-amd64
+]
+========================================================================================================================
+GraalVM Native Image: Generating 'incredible-slow-graalvm'...
+========================================================================================================================
+[1/7] Initializing...                                                                                    (2.9s @ 0.18GB)
+ Version info: 'GraalVM 22.1.0-dev Java 17 CE'
+# Printing compilation-target information to: /tmp/graalvm-test/incredible-slow-graalvm/target/reports/target_info_20220115_145951.txt
+[2/7] Performing analysis...  [*******]                                                                  (5.0s @ 0.51GB)
+# Printing native-library information to: /tmp/graalvm-test/incredible-slow-graalvm/target/reports/native_library_info_20220115_145956.txt
+   2,724 (83.56%) of  3,260 classes reachable
+   3,339 (60.29%) of  5,538 fields reachable
+  12,362 (73.10%) of 16,911 methods reachable
+      28 classes,     0 fields, and   173 methods registered for reflection
+      57 classes,    58 fields, and    51 methods registered for JNI access
+[3/7] Building universe...                                                                               (0.5s @ 0.68GB)
+[4/7] Parsing methods...      [*]                                                                        (0.4s @ 0.89GB)
+[5/7] Inlining methods...     [****]                                                                     (0.4s @ 0.78GB)
+[6/7] Compiling methods...    [**]                                                                       (2.9s @ 0.94GB)
+[7/7] Creating image...                                                                                  (1.0s @ 1.20GB)
+   4.03MB (33.55%) for code area:    7,419 compilation units
+   6.93MB (57.70%) for image heap:   1,636 classes and 89,261 objects
+   1.05MB ( 8.75%) for other data
+  12.00MB in total
+------------------------------------------------------------------------------------------------------------------------
+Top 10 packages in code area:                               Top 10 object types in image heap:
+ 637.41KB java.util                                            1.77MB byte[] for general heap data
+ 301.33KB java.lang                                          795.34KB java.lang.String
+ 284.51KB java.text                                          565.21KB java.lang.Class
+ 234.18KB java.util.regex                                    489.97KB byte[] for java.lang.String
+ 194.37KB com.oracle.svm.jni                                 419.11KB java.util.HashMap$Node
+ 178.17KB java.util.concurrent                               220.89KB java.util.HashMap$Node[]
+ 145.41KB java.math                                          154.50KB java.util.concurrent.ConcurrentHashMap$Node
+ 120.77KB com.oracle.svm.core.reflect                        146.70KB java.lang.String[]
+  94.52KB java.util.logging                                  143.73KB char[]
+  91.68KB java.util.stream                                   139.78KB sun.util.locale.LocaleObjectCache$CacheEntry
+      ... 115 additional packages                                 ... 765 additional object types
+                                           (use GraalVM Dashboard to see all)
+------------------------------------------------------------------------------------------------------------------------
+                        0.5s (3.4% of total time) in 17 GCs | Peak RSS: 2.80GB | CPU load: 10.22
+------------------------------------------------------------------------------------------------------------------------
+Produced artifacts:
+ /tmp/graalvm-test/incredible-slow-graalvm/target/incredible-slow-graalvm (executable)
+ /tmp/graalvm-test/incredible-slow-graalvm/target/incredible-slow-graalvm.build_artifacts.txt
+========================================================================================================================
+Finished generating 'incredible-slow-graalvm' in 14.2s.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.414 s
+[INFO] Finished at: 2022-01-15T15:00:02+03:00
+[INFO] ------------------------------------------------------------------------
